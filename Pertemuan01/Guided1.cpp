@@ -3,6 +3,8 @@
 
 using namespace std;
 
+// Tipe Data Primitif
+
 int main(){
     char op;
     float num1, num2;
