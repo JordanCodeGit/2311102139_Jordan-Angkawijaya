@@ -5,17 +5,17 @@
 
 Tipe data adalah suatu memori atau media pada komputer yang digunakan untuk menampung informasi atau data sementara. Tipe data berfungsi untuk mempresentasikan jenis dari sebuah nilai yang terdapat dalam program. Berikut ini merupakan macam-macam tipe data serta penjelasannya yang terdapat pada C++:
 
-1. Tipe Data Primitif__
+1. Tipe Data Primitif<br/>
 Tipe data primitif adalah tipe data yang sudah ditentukan oleh sistem dan disediakan oleh banyak bahasa pemrograman. Ini adalah blok bangunan fundamental untuk menyimpan nilai-nilai sederhana. Contoh tipe data primitif:
 - Int (Bilangan bulat)
 - Float (Bilangan desimal)
 - Char (Huruf)
 - Boolean (True/False)
 
-2. Tipe Data Abstrak__
+2. Tipe Data Abstrak<br/>
 Tipe data abstrak atau yang biasa disebut Abstrak Data Type merupakan tipe data yang dibentuk oleh programmer itu sendiri. Pada tipe data abstrak bisa berisi banyak tipe data, jadi nilainya bisa lebih dari satu dan beragam tipe data
 
-3. Tipe Data Koleksi__
+3. Tipe Data Koleksi<br/>
 Tipe data koleksi (Collection Data Type) adalah tipe data yang digunakan untuk mengelompokkan dan menyimpan beberapa nilai atau objek secara bersamaan. Tipe data koleksi memungkinkan Anda menyimpan, mengelola, dan mengakses sejumlah besar data dengan cara yang terstruktur. Contoh data koleksi:
 - Array (struktur data statis yang menyimpan elemen-elemen dengan
 tipe data yang sama)
@@ -264,7 +264,7 @@ int main() {
 ![Screenshot Output Unguided 1](Output-Unguided-1_Jordan.png)
 Kode di atas digunakan untuk memilih sebuah opsi diantara opsi pertambahan (+), pengurangan(-), perkalian (*), pembagian (/), dan pemangkatan (^). Kode di atas juga memiliki library cmath untuk mempermudah logika coding pemangkatan. Kode di atas juga memiliki 5 fungsi dan 1 prosedur, di mana 5 fungsi ini menampung logika pertambahan hingga pemangkatan dan 1 prosedur menampung tampilan awal menu kalkulator Jordan. Program ini juga dilengkapi dengan perulangan do while jadi user dapat mengulangi program itu selama user tidak menginput angka 0.
 
-Kesimpulan Tipe Data Primitif:__
+Kesimpulan Tipe Data Primitif:<br/>
 Tipe data primitif merupakan sebuah tipe data yang sudah ditentukan oleh sistem, disediakan oleh banyak bahasa pemrograman, dan merupakan blok bangunan fundamental untuk menyimpan nilai-nilai yang bersifat sederhana.
 
 ### 2. Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya!
@@ -319,10 +319,10 @@ int main() {
 ![Screenshot Output Unguided 2](Output-Unguided-2_Jordan.png)
 Kode di atas digunakan untuk mencetak sebuah class dan struct. Pada kode di atas, terdapat class Vehicle_2139 yang menampung nilai string Brand_2139, string Model_2139, dan int YearReleased_2139 dengan akses publik. Ada juga struct Person_2139 dengan nilai string Name_2139 dan int Age_2139. Struct Person_2139 ini diisi dengan nilai Jordan Angkawijaya dengan umur 20 dan Class Vehicle_2139 diisi dengan nilai Honda CB750 tahun 1969, lalu struct & class ini kemudian dideklarasikan.
 
-A. Fungsi dari Class__
+A. Fungsi dari Class<br/>
 Class adalah salah satu dari konsep OOP yang digunakan untuk membungkus data abstraksi procedural sebagai deskripsi tergeneralisir atau rancangan dari sebuah object untuk mendefinisikan atau menggambarkan isi dan tingkah laku sebagai entitas dari object. Fitur class adalah fitur Object Oriented Program pada bahasa C++.
 
-B. Fungsi dari Struct__
+B. Fungsi dari Struct<br/>
 Data struktur, atau Struct dalam pemrograman C++, adalah sekumpulan data yang dikelompokkan ke dalam sebuah “tabel” yang memiliki elemen-elemenyang saling terkait.Struct digunakan apabila data yang ingin dikelompokkan memiliki tipe data yang berbeda atau membuat struktur dari suatu record.
 
 ### 3. Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map!
@@ -381,5 +381,5 @@ Perbedaan Array dengan Map
 Tipe data C++ merupakan elemen penting dalam pemrograman yang menentukan jenis nilai yang dapat disimpan variabel dan operasi yang dapat dilakukan pada nilai tersebut. Memahami tipe data dengan baik membantu kita sebagai programmer dalam menulis program yang lebih efisien, akurat, dan mudah dibaca.
 
 ## Referensi
-[1] Khoirudin, Algoritma & Struktur Data dengan Python 3. Semarang: Universitas Semarang Press, 2019.__
+[1] Khoirudin, Algoritma & Struktur Data dengan Python 3. Semarang: Universitas Semarang Press, 2019.<br/>
 [2] Meidyan Permata Putri, et al., Algoritma dan Struktur Data. Bandung: Widina Bhakti Persada Bandung, 2022.
