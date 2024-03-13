@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// PROGRAM INPUT ARRAY 3 DIMENSI
+// Program input array 3 dimensi
 int main()
 {
     // Deklarasi array

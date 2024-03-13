@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// Program Mencari Nilai Maksimum pada Array
+
 int main()
 {
     int maks, a, i = 1, lokasi;
