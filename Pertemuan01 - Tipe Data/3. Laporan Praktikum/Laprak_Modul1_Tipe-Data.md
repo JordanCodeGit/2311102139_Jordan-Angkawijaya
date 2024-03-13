@@ -13,17 +13,13 @@ Tipe data primitif adalah tipe data yang sudah ditentukan oleh sistem dan disedi
     - Boolean (True/False)
 
 2. Tipe Data Abstrak<br/>
-Tipe data abstrak atau yang biasa disebut Abstrak Data Type merupakan tipe data yang dibentuk oleh programmer itu sendiri. Pada tipe data abstrak bisa berisi banyak tipe data, jadi nilainya bisa lebih dari satu dan beragam tipe data
+Tipe data abstrak merupakan tipe data yang dibentuk atau dikreasikan oleh programmer itu sendiri. Banyak tipe data dapat ditemukan pada tipe data abstrak, jadi nilainya bisa lebih dari satu dan bersifat beragam tipe data.
 
 3. Tipe Data Koleksi<br/>
-Tipe data koleksi (Collection Data Type) adalah tipe data yang digunakan untuk mengelompokkan dan menyimpan beberapa nilai atau objek secara bersamaan. Tipe data koleksi memungkinkan Anda menyimpan, mengelola, dan mengakses sejumlah besar data dengan cara yang terstruktur. Contoh data koleksi:
-    - Array (struktur data statis yang menyimpan elemen-elemen dengan
-    tipe data yang sama)
-    - Vector (vector mirip seperti array yang memiliki
-    kemampuan untuk menyimpan data dalam bentuk elemen-elemen yang alokasi
-    memorinya dilakukan otomatis dan bersebelahan)
-    - Map (Map terasa mirip dengan array namun dengan index yang memungkinkan
-    untuk berupa tipe data selain integer)
+Tipe data koleksi adalah jenis atau tipe data yang digunakan untuk menghimpun kumpulan data, atau data yang berjumlah lebih dari satu. Tipe data koleksi memungkinkan user untuk mengelola, menyimpan, dan mengakses sejumlah data yang bersifat besar dengan cara yang terstruktur. Contoh data koleksi:
+    - Array (struktur data statis yang menyimpan elemen-elemen dengan tipe data yang sama)
+    - Vector (vector mirip seperti array yang memiliki kemampuan untuk menyimpan data dalam bentuk elemen-elemen yang alokasi memorinya dilakukan otomatis dan bersebelahan)
+    - Map (Map terasa mirip dengan array namun dengan index yang memungkinkan untuk berupa tipe data selain integer)
 
 ## Guided 
 
