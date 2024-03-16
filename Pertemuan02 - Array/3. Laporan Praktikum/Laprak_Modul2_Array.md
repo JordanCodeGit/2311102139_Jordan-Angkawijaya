@@ -95,28 +95,30 @@ int main()
 
 ## Unguided 
 
-### 1. Buatlah program untuk menampilkan Output seperti berikut dengan data yang diinputkan oleh user!
+### 1. Buatlah program untuk menampilkan output seperti berikut dengan data yang diinputkan oleh user!
+![Screenshot Soal Unguided 1](SoalUnguided1.png)
+```C++
+
+```
+#### Output:
+
+### 2. Buatlah program input array tiga dimensi (seperti pada guided) tetapi jumlah atau ukuran elemennya diinputkan oleh user!
 
 ```C++
 
 ```
 #### Output:
 
-### 2. Buatlah program Input array tiga dimensi (seperti pada guided) tetapi jumlah atau ukuran elemennya diinputkan oleh user!
+### 3. Buatlah program menu untuk mencari nilai maksimum, minimum dan nilai rata – rata dari suatu array dengan input yang dimasukkan oleh user!
 
 ```C++
 
 ```
 #### Output:
-
-### 3. Buatlah program menu untuk mencari nilai maksimum, minimum dan nilai rata – rata dari suatu array dengan input yang dimasukan oleh user!
-
-```C++
-
-```
-#### Output:
-
 
 ## Kesimpulan
 
 ## Referensi
+[1] Khoirudin, Algoritma & Struktur Data dengan Python 3. Semarang: Universitas Semarang Press, 2019.<br/>
+[2] Meidyan Permata Putri, et al., Algoritma dan Struktur Data. Bandung: Widina Bhakti Persada Bandung, 2022.<br/>
+[3] Muhammad Nugraha, Dasar Pemrograman Dengan C++, Materi Paling Dasar untuk Menjadi Programmer Berbagai Platform. Yogyakarta: Deepublish, 2021.
