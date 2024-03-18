@@ -2,7 +2,7 @@
 <p align="center">Jordan Angkawijaya - 2311102139</p>
 
 ## Dasar Teori
-Array adalah kumpulan-kumpulan variabel yang menyimpan data dengan tipe yang sama atau data-data yang tersusun secara linear dimana di dalamnya terdapat elemen dengan tipe yang sama. Indeks dalam array menyatakan elemen yang disimpan dan panjang atau length menyatakan total elemen yang tersimpan. Jenis-jenis tipe data array yang umum diketahui ada 3, yaitu:
+<div align="justify">Array adalah kumpulan-kumpulan variabel yang menyimpan data dengan tipe yang sama atau data-data yang tersusun secara linear dimana di dalamnya terdapat elemen dengan tipe yang sama. Indeks dalam array menyatakan elemen yang disimpan dan panjang atau length menyatakan total elemen yang tersimpan. Jenis-jenis tipe data array yang umum diketahui ada 3, yaitu:</div>
 1. Array Satu Dimensi<br/>
     Array satu dimensi adalah jenis array dasar yang terdiri dari beberapa kolom elemen. Dalam satu baris tersusun dari beberapa elemen-elemen yang sama. Keunggulan dari array satu dimensi adalah mudah digunakan dan mudah dibaca sehingga paling umum digunakan.
     Contohnya:
