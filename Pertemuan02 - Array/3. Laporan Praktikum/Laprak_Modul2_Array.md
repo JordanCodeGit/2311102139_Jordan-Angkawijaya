@@ -172,7 +172,7 @@ int main() {
 Kode di atas digunakan untuk menentukan bilangan ganjil dan genap dari inputan user. Pada kode di atas, terdapat tiga variabel, yaitu:
 - const int SizeLimit_2139 untuk menentukan maksimal angka yang dapat diinput user, dilengkapi dengan const supaya tidak bisa diubah
 - int Data_2139[SizeLimit_2139] untuk wadah array menyimpan angka yang diinput user
-- int DataAmount_2139 untuk wadah jumlah angka yang sudah dimasukkan user, defaultnya 0 karena sudah pasti di awal tidak ada angka yang diinput
+- int DataAmount_2139 untuk wadah jumlah angka yang sudah dimasukkan user, defaultnya 0 karena sudah pasti di awal tidak ada angka yang diinput<br/>
 Jadi user bisa menginput hingga 10 angka sebelum programnya menampilkan hasil output data array beserta bilangan genap dan ganjilnya. Jika user ingin menginput jumlah angka dibawah 10, user dapat mengakhiri dengan karakter selain angka, seperti tanda titik (.). Jika user sudah menginput, program dapat menampilkan output data array dengan perulangan for, output bilangan genap dengan perulangan for dan percabangan if jika bilangan tersebut habis dibagi 2, dan bilangan ganjil dengan perulangan for dan percabangan if jika bilangan tersebut tidak habis dibagi 2.
 
 ### 2. Buatlah program input array tiga dimensi (seperti pada guided) tetapi jumlah atau ukuran elemennya diinputkan oleh user!
@@ -234,7 +234,7 @@ int main()
 ![Screenshot Output Unguided 2](Output-Unguided-2_Modul2_Jordan.png)    
 Kode di atas digunakan untuk menampilkan array tiga dimensi, di mana jumlah atau ukuran elemen arraynya diinputkan oleh user. Kode di atas sangat mirip dengan Guided 1, hanya perbedaannya ada di:
 - Jumlah atau ukuran elemen array tiga dimensi ini ditentukan manual oleh inputan user
-- Dibandingkan Guided 1, outputnya hanya 1 jenis, yaitu bilangan murni yang diinput user tanpa adanya bilangan siku []
+- Dibandingkan Guided 1, outputnya hanya 1 jenis, yaitu bilangan murni yang diinput user tanpa adanya bilangan siku []<br/>
 Cara kerjanya juga mirip dengan Guided 1, di mana proses penginputan elemen ke dalam array tiga dimensi itu dibantu dengan nested loop x, y, dan z hingga mencapai size yang sudah ditentukan oleh user sebelumnya.
 
 ### 3. Buatlah program menu untuk mencari nilai maksimum, minimum dan nilai rata – rata dari suatu array dengan input yang dimasukkan oleh user!
@@ -332,8 +332,8 @@ Kode di atas digunakan untuk mencari nilai maksimum/tertinggi, minimum/terendah,
 - const int MaxSize_2139, berfungsi sebagai maksimal ukuran array. Pada kode di atas, maksimal ukuran arraynya adalah 10
 - int arr[MaxSize_2139], array untuk menyimpan elemen-elemen integer
 - int Size_2139, variabel untuk menentukan size array yang diinput oleh user, di mana Size_2139 harus lebih kecil dari MaxSize_2139. Jika lebih besar, maka akan muncul error.
-- int Choice_2139, variabel untuk memilih pilihan dari menu maksimal, minimal, dan rata-rata
-Pada saat program mulai, user akan diminta untuk menentukan ukuran array di mana maksimalnya adalah 10. Setelah menentukan ukuran array, user diminta untuk mengisi array dengan sejumlah bilangan sesuai ukuran arraynya. Setelah diisi, user diberikan menu supaya user dapat memilih untuk menampilkan output nilai maksimum, minimum, rata-rata dari array tersebut, atau keluar dari program. 
+- int Choice_2139, variabel untuk memilih pilihan dari menu maksimal, minimal, dan rata-rata<br/>
+Pada saat program mulai, user akan diminta untuk menentukan ukuran array di mana maksimalnya adalah 10. Setelah menentukan ukuran array, user diminta untuk mengisi array dengan sejumlah bilangan sesuai ukuran arraynya. Setelah diisi, user diberikan menu supaya user dapat memilih untuk menampilkan output nilai maksimum, minimum, rata-rata dari array tersebut, atau keluar dari program.<br/> 
 Logika maksimum diawali dengan menentukan int max yang diisi dengan nilai terkecil pada tipe data integer, yaitu -2147483648. Lalu menjalani logika perulangan for dan percabangan if untuk mencari nilai tertinggi dalam array tersebut. Logika minimum juga sama, tetapi diawali dengan menentukan int min yang diisi dengan nilai terbesar pada tipe data integer, yaitu 2147483647. Untuk logika rata-rata, digunakan tipe data double supaya bisa menampilkan bilangan desimal. Dengan logika dijumlahkan terlebih dahulu lalu dibagikan dengan variabel Size_2139, nilai rata-rata dapat ditemukan. Dilengkapi juga dengan perulangan do while untuk mengulangi pilihan menunya.
 
 ## Kesimpulan
