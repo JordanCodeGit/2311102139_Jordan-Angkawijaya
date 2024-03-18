@@ -33,7 +33,7 @@ int main() {
     cout << "Nomor genap  : ";
     for (int i = 0; i < DataAmount_2139; ++i) { // Melakukan perulangan untuk mengecek angka genap
         if (Data_2139[i] % 2 == 0)
-            cout << Data_2139[i] << " ";
+            cout << Data_2139[i] << ", ";
     }
     cout << endl;
 
@@ -41,7 +41,7 @@ int main() {
     cout << "Nomor ganjil : ";
     for (int i = 0; i < DataAmount_2139; ++i) { // Melakukan perulangan untuk mengecek angka ganjil
         if (Data_2139[i] % 2 != 0)
-            cout << Data_2139[i] << " ";
+            cout << Data_2139[i] << ", ";
     }
     cout << endl;
 
