@@ -270,9 +270,9 @@ void Reveal_2139() {
 }
 
 int main() {
-    Initialize_2139();
+    Initialize_2139(); // Inisialisasi Linked List
     cout << "\n-=-=-= WELCOME TO JORDAN'S PROGRAM =-=-=-" << endl;
-    cout << "-Nama- ㅤㅤㅤ -Umur-" << endl;
+    cout << "-Nama- ㅤㅤㅤ -Umur-" << endl; // Menampilkan nama dan umur awal & menjawab poin a
     InsertFront_2139("Karin ㅤㅤ ", 18);
     InsertFront_2139("Hoshino ㅤ ", 18);
     InsertFront_2139("Akechi  ㅤ ", 20);
@@ -283,21 +283,25 @@ int main() {
     InsertFront_2139("Jordanㅤㅤ ", 20);
     Reveal_2139();
 
-    cout << "\n-=-=-= (B) Menghapus data 'Akechi' =-=-=-" << endl;
+    // Menjawab poin b
+    cout << "\n-=-=-= (B) Penghapusan data 'Akechi' =-=-=-" << endl;
     cout << "Nama ㅤㅤㅤ Umur" << endl;
     EraseMiddle_2139(6);
     Reveal_2139();
 
-    cout << "\n-=-=-= (C) Menambahkan data 'Futaba (18)' diantara John & Jane =-=-=-" << endl;
+    // Menjawab poin c
+    cout << "\n-=-=-= (C) Penambahan data 'Futaba (18)' diantara John & Jane =-=-=-" << endl;
     cout << "Nama ㅤㅤㅤ Umur" << endl;
     InsertMiddle_2139("Futaba ㅤㅤ", 18, 3);
     Reveal_2139();
 
-    cout << "\n-=-=-= (D) Menambahkan data 'Igor (20)' di awal =-=-=-" << endl;
+    // Menjawab poin d
+    cout << "\n-=-=-= (D) Penambahan data 'Igor (20)' di awal =-=-=-" << endl;
     cout << "Nama ㅤㅤㅤ Umur" << endl;
     InsertFront_2139("Igor  ㅤㅤ ", 20);
     Reveal_2139();
 
+    // Menjawab poin e & f
     cout << "\n-=-=-= (E) Mengubah data 'Michael' menjadi 'Reyn (18)' =-=-=-" << endl;
     cout << "-=-=-= (F) Tampilan Akhir! =-=-=-" << endl;
     cout << "Nama ㅤㅤㅤ Umur" << endl;

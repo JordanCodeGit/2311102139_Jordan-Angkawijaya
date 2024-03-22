@@ -136,6 +136,7 @@ int main() {
         cin >> Choice_2139;
 
         switch (Choice_2139) {
+            // Case untuk menambahkan data
             case 1: {
                 int Price_2139;
                 string Product_2139;
@@ -151,12 +152,14 @@ int main() {
                 break;
             }
 
+            // Case untuk menghapus data
             case 2: {
                 list.pop(); // Memanggil prosedur pop untuk menghapus data
                 cout << "Produk berhasil dimusnahkan!";
                 break;
             }
 
+            // Case untuk mengupdate data
             case 3: {
                 string oldProduct, newProduct; // Deklarasi variabel oldProduct dan newProduct
                 int newPrice; // Deklarasi variabel newPrice
@@ -175,6 +178,7 @@ int main() {
                 break;
             }
 
+            // Case untuk menambahkan data pada posisi tertentu
             case 4: {
                 int position, Price_2139;
                 string Product_2139;
@@ -191,6 +195,7 @@ int main() {
                 break;
             }
 
+            // Case untuk menghapus data pada posisi tertentu
             case 5: {
                 int position; // Deklarasi variabel position
 
@@ -201,18 +206,21 @@ int main() {
                 break;
             }
 
+            // Case untuk menghapus semua data
             case 6: {
                 list.deleteAll(); // Memanggil prosedur deleteAll untuk menghapus semua data
                 cout << "Wah, semua data terhapus!" << endl;
                 break;
             }
 
+            // Case untuk menampilkan data
             case 7: {
                 cout << "\n-Nama Produk- ㅤㅤ-Harga-" << endl;
                 list.display(); // Menampilkan data
                 break;
             }
 
+            // Case untuk keluar dari program
             case 8: {
                 cout << "Exiting. . ." << endl;
                 return 0;
