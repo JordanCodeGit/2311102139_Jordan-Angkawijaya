@@ -3,6 +3,7 @@ by Jordan Angkawijaaya - 2311102139
 */
 
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 // Deklarasi Struct Node
@@ -27,7 +28,7 @@ public:
     }
 
     // Prosedur untuk menambahkan data di depan
-    void push(int Price_2139, string Product_2139) {
+    void Push_2139(int Price_2139, string Product_2139) {
         Node* newNode = new Node;
         newNode->Price_2139 = Price_2139;
         newNode->Product_2139 = Product_2139;
@@ -44,8 +45,50 @@ public:
         head = newNode;
     }
 
+    // Prosedur untuk menambahkan data pada posisi tertentu
+    void PushPosition_2139(int position, int Price_2139, string Product_2139) {
+        if (position < 1) { // Jika posisi data kurang dari 1
+            cout << "There's no position below 1.. you know that, right?" << endl;
+            return;
+        }
+
+        Node* newNode = new Node;
+        newNode->Price_2139 = Price_2139; // Mengisi data Price_2139
+        newNode->Product_2139 = Product_2139; // Mengisi data Product_2139
+        newNode->prev = nullptr; // Mengisi data prev
+        newNode->next = nullptr; // Mengisi data next
+
+        if (position == 1) {
+            newNode->next = head;
+            if (head != nullptr) // Jika head tidak kosong
+                head->prev = newNode; // Menggeser head ke newNode
+            else // Jika head kosong
+                tail = newNode; // Menggeser tail ke newNode
+            head = newNode;
+            return;
+        }
+
+        Node* current = head; // Deklarasi variabel current
+        for (int i = 1; i < position - 1 && current != nullptr; ++i) // Looping untuk mencari posisi data
+            current = current->next; // Menggeser current ke next
+
+        if (current == nullptr) { // Jika posisi data tidak ditemukan
+            cout << "Whatever you input, it was wrong." << endl;
+            delete newNode;
+            return;
+        }
+
+        newNode->next = current->next;
+        newNode->prev = current;
+        if (current->next != nullptr) // Jika current->next tidak kosong
+            current->next->prev = newNode;
+        else // Jika current->next kosong
+            tail = newNode;
+        current->next = newNode;
+    }
+
     // Prosedur untuk menghapus data di depan
-    void pop() {
+    void Pop_2139() {
         if (head == nullptr) {
             return;
         }
@@ -63,8 +106,40 @@ public:
         delete temp;
     }
 
+    // Prosedur untuk menghapus data pada posisi tertentu
+    void PopPosition_2139(int position) {
+        if (head == nullptr) { // Jika list kosong
+            cout << "WHAT ARE YOU TRYING TO DELETE?? THE LIST IS EMPTY!" << endl;
+            return;
+        }
+
+        Node* temp = head; // Deklarasi variabel temp
+        for (int i = 1; i < position && temp != nullptr; ++i) { // Looping untuk mencari posisi data
+            temp = temp->next; // Menggeser temp ke next
+        }
+
+        if (temp == nullptr) { // Jika posisi data tidak ditemukan
+            cout << "Whatever you just input, it's wrong." << endl;
+            return;
+        }
+
+        if (temp->prev != nullptr) { // Jika temp->prev tidak kosong
+            temp->prev->next = temp->next; // Menggeser temp->prev ke temp->next
+        } else { // Jika temp->prev kosong
+            head = temp->next; // Menggeser head ke temp->next
+        }
+
+        if (temp->next != nullptr) { // Jika temp->next tidak kosong
+            temp->next->prev = temp->prev; // Menggeser temp->next ke temp->prev
+        } else { // Jika temp->next kosong
+            tail = temp->prev; // Menggeser tail ke temp->prev
+        }
+
+        delete temp; // Menghapus temp
+    }
+
     // Fungsi untuk mengupdate data
-    bool update(string oldProduct, string newProduct, int newPrice) {
+    bool Update_2139(string oldProduct, string newProduct, int newPrice) {
         Node* current = head;
 
         while (current != nullptr) {
@@ -80,7 +155,7 @@ public:
     }
 
     // Prosedur untuk menghapus semua data
-    void deleteAll() {
+    void DeleteAll_2139() {
         Node* current = head;
 
         while (current != nullptr) {
@@ -94,11 +169,13 @@ public:
     }
 
     // Prosedur untuk menampilkan data
-    void display() {
+    void Display_2139() {
         Node* current = head;
 
+        cout << left << setw(20) << "-Nama Produk-" << right << setw(6) << "-Harga-" << endl; // Supaya rapi
+
         while (current != nullptr) {
-            cout << current->Product_2139 << " " << current->Price_2139 << endl;
+            cout << left << setw(20) << current->Product_2139 << right << setw(4) << current->Price_2139 << endl;
             current = current->next;
         }
 
@@ -109,16 +186,15 @@ public:
 int main() {
     DoublyLinkedList list; // Deklarasi objek list dari class DoublyLinkedList
 
-    cout << "\n-=-=-= WELCOME TO TOKO SKINCARE PURWOKERTO =-=-=-" << endl;
-    
+    cout << "\n-=-=-= WELCOME TO TOKO SKINCARE PURWOKERTO BY JORDAN =-=-=-" << endl;
+
     // Deklarasi data awal dari Toko Skincare Purwokerto
-    cout << "\n-Nama Produk- ㅤㅤ-Harga-" << endl;
-    list.push(30000, " Hanasui  ㅤㅤㅤㅤ");
-    list.push(50000, " Wardah ㅤㅤㅤㅤㅤ");
-    list.push(100000, " Skintific ㅤㅤㅤ");
-    list.push(150000, " Somethinc ㅤㅤㅤ");
-    list.push(60000, " Originote  ㅤㅤ  ");
-    list.display(); // Menampilkan data awal
+    list.Push_2139(30000, "Hanasui");
+    list.Push_2139(50000, "Wardah");
+    list.Push_2139(100000, "Skintific");
+    list.Push_2139(150000, "Somethinc");
+    list.Push_2139(60000, "Originote");
+    list.Display_2139(); // Menampilkan data awal
 
     while (true) { // Looping untuk menampilkan menu
         cout << "\nMenu Toko Skincare Purwokerto" << endl;
@@ -147,32 +223,36 @@ int main() {
                 getline(cin, Product_2139); // Menggunakan getline agar bisa membaca spasi
                 cout << "Harga produk: ";
                 cin >> Price_2139;
-                list.push(Price_2139, Product_2139); // Memanggil prosedur push untuk menambahkan data
+                list.Push_2139(Price_2139, Product_2139); // Memanggil prosedur push untuk menambahkan data
                 cout << "Produk berhasil ditambahkan!" << endl;
                 break;
             }
 
             // Case untuk menghapus data
             case 2: {
-                list.pop(); // Memanggil prosedur pop untuk menghapus data
-                cout << "Produk berhasil dimusnahkan!";
+                list.Pop_2139(); // Memanggil prosedur Pop_2139 untuk menghapus data
+                cout << "Produk paling atas berhasil dimusnahkan!" << endl;
                 break;
             }
 
             // Case untuk mengupdate data
             case 3: {
-                string oldProduct, newProduct; // Deklarasi variabel oldProduct dan newProduct
-                int newPrice; // Deklarasi variabel newPrice
+                string oldProduct, newProduct; // Declaring variables oldProduct and newProduct
+                int newPrice; // Declaring variable newPrice
 
-                cout << "\n-=- UPDATE PRODUK SKINCARE -=-";
-                cout << "Input produk yang ingin digantikan: "; cin >> oldProduct;               
-                cout << "Input produk skincare baru: "; cin >> newProduct;
-                cout << "Input harga baru: "; cin >> newPrice;
+                cout << "\n-=- UPDATE PRODUK SKINCARE -=-" << endl;
+                cout << "Input produk yang ingin digantikan: ";
+                cin.ignore(); // Ignoring the newline character from the previous cin
+                getline(cin, oldProduct); // Using getline to read the entire line
+                cout << "Input produk skincare baru: ";
+                getline(cin, newProduct);
+                cout << "Input harga baru: ";
+                cin >> newPrice;
 
-                bool updated = list.update(oldProduct, newProduct, newPrice); // Memanggil fungsi update untuk mengupdate data
-                cout << "Data berhasil diupdate!" << endl;
-
-                if (!updated) {
+                bool updated = list.Update_2139(oldProduct, newProduct, newPrice); // Calling the update function to update data
+                if (updated) {
+                    cout << "Data berhasil diupdate!" << endl;
+                } else {
                     cout << "Uhh data tidak ditemukan!?" << endl;
                 }
                 break;
@@ -183,14 +263,15 @@ int main() {
                 int position, Price_2139;
                 string Product_2139;
 
-                cout << "\n-=- UPDATE PRODUK SKINCARE DENGAN POSISI -=-";
-                cout << "Input posisi untuk produk baru: " << endl;
+                cout << "\n-=- TAMBAH PRODUK SKINCARE DENGAN POSISI -=-" << endl;
+                cout << "Input posisi untuk produk baru: ";
                 cin >> position; // Memasukkan posisi data yang ingin ditambahkan
-                cout << "Input produk skincare baru: " << endl;
+                cout << "Input produk skincare baru: ";
                 cin.ignore(); // Mengabaikan karakter newline dari cin sebelumnya
                 getline(cin, Product_2139); // Menggunakan getline agar bisa membaca spasi
-                cout << "Input harga: " << endl;
+                cout << "Input harga: ";
                 cin >> Price_2139;
+                list.PushPosition_2139(position, Price_2139, Product_2139); // Memanggil prosedur PushPosition_2139 untuk menambahkan data pada posisi tertentu
                 cout << "Produk berhasil ditambahkan pada posisi ke-" << position << "!" << endl;
                 break;
             }
@@ -199,24 +280,25 @@ int main() {
             case 5: {
                 int position; // Deklarasi variabel position
 
-                cout << "\n-=- HAPUS PRODUK SKINCARE DENGAN POSISI -=-";
+                cout << "\n-=- HAPUS PRODUK SKINCARE DENGAN POSISI -=-" << endl;
                 cout << "Enter position to delete data: ";
                 cin >> position; // Memasukkan posisi data yang ingin dihapus
+                list.PopPosition_2139(position); // Memanggil prosedur PopPosition_2139 untuk menghapus data pada posisi tertentu
                 cout << "Data berhasil dihapus pada posisi ke-" << position << "!" << endl;
                 break;
             }
 
             // Case untuk menghapus semua data
             case 6: {
-                list.deleteAll(); // Memanggil prosedur deleteAll untuk menghapus semua data
+                list.DeleteAll_2139(); // Memanggil prosedur DeleteAll_2139 untuk menghapus semua data
                 cout << "Wah, semua data terhapus!" << endl;
                 break;
             }
 
             // Case untuk menampilkan data
             case 7: {
-                cout << "\n-Nama Produk- ㅤㅤ-Harga-" << endl;
-                list.display(); // Menampilkan data
+                cout << "\n-=- DATA PRODUK SKINCARE -=-";
+                list.Display_2139(); // Menampilkan data
                 break;
             }
 

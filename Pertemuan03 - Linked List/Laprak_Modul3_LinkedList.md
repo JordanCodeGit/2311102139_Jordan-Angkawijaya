@@ -2,6 +2,23 @@
 <p align="center">Jordan Angkawijaya - 2311102139</p>
 
 ## Dasar Teori
+Linked list adalah strukur data linier berbentuk rantai simpul di mana setiap simpul menyimpan 2 item, yaitu nilai data dan pointer ke simpul elemen berikutnya. Berbeda dengan array, elemen linked list tidak ditempatkan dalam alamat memori yang berdekatan melainkan elemen ditautkan menggunakan pointer. Simpul pertama dari linked list disebut sebagai head atau simpul kepala. Apabila linked list berisi elemen kosong, maka nilai pointer dari head menunjuk ke NULL. Begitu juga untuk pointer berikutnya dari simpul terakhir atau simpul ekor akan menunjuk ke NULL.</br> 
+Pada praktikum modul ini, ada dua jenis linked list yang dibahas secara rinci, yaitu Single Linked List dan Double Linked List.
+
+- Single Linked List</br>
+Single linked list adalah struktur data linear dimana setiap node memiliki dua bagian, yaitu Data (informasi aktual yang disimpan di dalam node) dan Next Link (Pointer yang menunjuk ke node berikutnya di dalam urutan). Single Linked List ini dibagi menjadi dua macam, yaitu:
+    - Single Linked List non Circular</br>
+    Sebuah Single Linked List non-circular adalah struktur data linear yang tersusun dari node-node yang terhubung satu sama lain. Namun, pada Single Linked List non-circular, pointer next pada node terakhir akan menunjuk ke NULL. Ini menandakan akhir dari list.</br>
+    - Single Linked List Cirucular</br>
+    Sebuah Single Linked List circular mirip dengan Single Linked List non-circular, namun dengan perbedaan pada pointer next pada node terakhir. Dalam Single Linked List circular, pointer next pada node terakhir akan menunjuk kembali ke node pertama (head) sehingga membentuk lingkaran tertutup.</br>
+Perbedaan circular linked list dan non circular linked adalah penunjuk next pada node terakhir pada circular linked list akan selalu merujuk ke node pertama.
+
+- Double Linked List</br>
+Double Linked List adalah elemen-elemen yang dihubungkan dengan dua pointer dalam satu elemen dan list dapat melintas baik di depan atau belakang. Double Linked List memungkinkan untuk melakukan operasi penghapusan dan penambahan pada simpul mana saja secara efisien. Setiap simpul pada Double Linked List memiliki tiga elemen penting, yaitu:
+    1. Bagian data informasi</br>
+    2. Pointer next yang menunjuk ke elemen berikutnya</br>
+    3. Pointer prev yang menunjuk ke elemen sebelumnya</br>
+Keuntungan dari Double Linked List adalah memungkinkan untuk melakukan operasi penghapusan dan penambahan pada simpul dimana saja dengan efisien, sehingga sangat berguna dalam implementasi beberapa algoritma yang membutuhkan operasi tersebut. Double Linked List juga dapat melakukan traversal pada list baik dari depan (head) maupun dari belakang (tail) dengan mudah.
 
 ## Guided 
 
@@ -299,7 +316,7 @@ int main() {
     return 0;
 }
 ```
-Kode di atas digunakan untuk menginput nilai pada array tiga dimensi. Pada kode di atas, dideklarasikan size array tiga dimensi itu, yaitu x bernilai 2, y bernilai 3, dan z bernilai 3 juga. Proses penginputan elemen ke dalam array tiga dimensi itu dibantu dengan nested loop x, y, dan z hingga mencapai size masing-masing. Jika user sudah menginput semua nilai ke dalam array tiga dimensi, maka akan muncul 2 macam output, yaitu output array dan output nilai-nilai murni yang diinput user tanpa tanda kurung siku [].
+
 
 ### 2. Latihan Double Linked List
 
@@ -460,21 +477,331 @@ int main() {
     return 0;
 }
 ```
-Kode di atas digunakan untuk mencari nilai tertinggi atau maksimal pada suatu array. Pada kode di atas, terdapat array berdimensi satu di mana size nya sesuai dengan jumlah nilai yang diinput user. Jika user menginput nilai 5 pada saat penginputan panjang array, maka panjang array tersebut adalah 5. Setelah memasukkan panjang array, kode meminta user untuk menginput nilai-nilai pada array tersebut. Jika panjang arraynya 5, maka user harus menginput nilai apapun sebanyak 5 kali. Jika sudah, kode akan mengecek nilai tertinggi pada array tersebut dengan bantuan perulangan for dan if. Jika kode menemukan nilai maksimalnya, maka nilai array[i] akan menjadi maks, dan i akan menjadi lokasi. Lalu, variabel lokasi akan ditampilkan sebagai nilai tertinggi pada array tersebut.
+
 
 ## Unguided 
 
-### 1. Buatlah program menu Single Linked List Non-Circular untuk menyimpan Nama dan Usia mahasiswa, dengan menggunakan inputan dari user. Lakukan operasi berikut:
+### 1. Buatlah program menu Single Linked List Non-Circular untuk menyimpan Nama dan Usia mahasiswa, dengan menggunakan inputan dari user. Lakukan operasi berikut:</br> a. Masukkan data Masukkan data sesuai urutan berikut. (Gunakan insert depan, belakang atau tengah). Data pertama yang dimasukkan adalah nama dan usia anda.</br> b. Hapus data Akechi</br> c. Tambahkan data berikut diantara John dan Jane: "Futaba 18"</br> d. Tambahkan data berikut di awal: "Igor 20"</br> e. Ubah data Michael menjadi: "Reyn 18"</br> f. Tampilkan seluruh data
 
 ```C++
+/*
+by Jordan Angkawijaya - 2311102139
+*/
 
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+//Deklarasi Struct Node
+struct Node {
+    string Name_2139;
+    int Age_2139;
+    Node* next;
+};
+
+Node* head;
+Node* tail;
+
+//Inisialisasi Node
+void Initialize_2139() {
+    head = NULL;
+    tail = NULL;
+}
+
+// Pengecekan
+bool ItsEmpty_2139() {
+    if (head == NULL)
+        return true;
+    else
+        return false;
+}
+
+//Tambah Depan
+void InsertFront_2139(string name, int age) {
+    //Buat Node baru
+    Node* baru = new Node;
+    baru->Name_2139 = name;
+    baru->Age_2139 = age;
+    baru->next = NULL;
+
+    if (ItsEmpty_2139() == true) {
+        head = tail = baru;
+        tail->next = NULL;
+    }
+    else {
+        baru->next = head;
+        head = baru;
+    }
+}
+
+//Tambah Belakang
+void InsertBack_2139(string name, int age) {
+    //Buat Node baru
+    Node* baru = new Node;
+    baru->Name_2139 = name;
+    baru->Age_2139 = age;
+    baru->next = NULL;
+
+    if (ItsEmpty_2139() == true) {
+        head = tail = baru;
+        tail->next = NULL;
+    }
+    else {
+        tail->next = baru;
+        tail = baru;
+    }
+}
+
+//Hitung Jumlah List
+int CountList_2139() {
+    Node* hitung;
+    hitung = head;
+    int jumlah = 0;
+
+    while (hitung != NULL) {
+        jumlah++;
+        hitung = hitung->next;
+    }
+
+    return jumlah;
+}
+
+//Tambah Tengah
+void InsertMiddle_2139(string name, int age, int posisi) {
+    if (posisi < 1 || posisi > CountList_2139()) {
+        cout << "Heyyy, the position is out of range!" << endl;
+    }
+    else if (posisi == 1) {
+        cout << "Wow, the position you input wasn't the middle." << endl;
+    }
+    else {
+        Node* baru, * bantu;
+        baru = new Node();
+        baru->Name_2139 = name;
+        baru->Age_2139 = age;
+
+        // tranversing
+        bantu = head;
+        int nomor = 1;
+
+        while (nomor < posisi - 1) {
+            bantu = bantu->next;
+            nomor++;
+        }
+
+        baru->next = bantu->next;
+        bantu->next = baru;
+    }
+}
+
+//Hapus Depan
+void EraseFront_2139() {
+    Node* hapus;
+
+    if (ItsEmpty_2139() == false) {
+        if (head->next != NULL) {
+            hapus = head;
+            head = head->next;
+            delete hapus;
+        }
+        else {
+            head = tail = NULL;
+        }
+    }
+    else {
+        cout << "ITS EMPTY!" << endl;
+    }
+}
+
+//Hapus Belakang
+void EraseBack_2139() {
+    Node* hapus;
+    Node* bantu;
+
+    if (ItsEmpty_2139() == false) {
+        if (head != tail) {
+            hapus = tail;
+            bantu = head;
+
+            while (bantu->next != tail) {
+                bantu = bantu->next;
+            }
+
+            tail = bantu;
+            tail->next = NULL;
+            delete hapus;
+        }
+        else {
+            head = tail = NULL;
+        }
+    }
+    else {
+        cout << "ITS EMPTY!" << endl;
+    }
+}
+
+//Hapus Tengah
+void EraseMiddle_2139(int posisi) {
+    Node* hapus, * bantu, * bantu2;
+
+    if (posisi < 1 || posisi > CountList_2139()) {
+        cout << "Heyyy, the position is out of range!" << endl;
+    }
+    else if (posisi == 1) {
+        cout << "Wow, the position you input wasn't the middle." << endl;
+    }
+    else {
+        int nomor = 1;
+        bantu = head;
+
+        while (nomor <= posisi) {
+            if (nomor == posisi - 1) {
+                bantu2 = bantu;
+            }
+
+            if (nomor == posisi) {
+                hapus = bantu;
+            }
+
+            bantu = bantu->next;
+            nomor++;
+        }
+
+        bantu2->next = bantu;
+        delete hapus;
+    }
+}
+
+//Ubah Depan
+void ChangeFront_2139(string name, int age) {
+    if (ItsEmpty_2139() == false) {
+        head->Name_2139 = name;
+        head->Age_2139 = age;
+    }
+    else {
+        cout << "THERE'S NOTHING TO CHANGE!" << endl;
+    }
+}
+
+//Ubah Tengah
+void ChangeMiddle_2139(string name, int age, int posisi) {
+    Node* bantu;
+
+    if (ItsEmpty_2139() == false) {
+        if (posisi < 1 || posisi > CountList_2139()) {
+            cout << "Heyyy, the position is out of range!" << endl;
+        }
+        else if (posisi == 1) {
+            cout << "Wow, the position you input wasn't the middle." << endl;
+        }
+        else {
+            bantu = head;
+            int nomor = 1;
+
+            while (nomor < posisi) {
+                bantu = bantu->next;
+                nomor++;
+            }
+
+            bantu->Name_2139 = name;
+            bantu->Age_2139 = age;
+        }
+    }
+    else {
+        cout << "ITS EMPTY!" << endl;
+    }
+}
+
+//Ubah Belakang
+void ChangeBack_2139(string name, int age) {
+    if (ItsEmpty_2139() == false) {
+        tail->Name_2139 = name;
+        tail->Age_2139 = age;
+    }
+    else {
+        cout << "ITS EMPTY" << endl;
+    }
+}
+
+//Hapus List
+void EraseList_2139() {
+    Node* bantu, * hapus;
+    bantu = head;
+
+    while (bantu != NULL) {
+        hapus = bantu;
+        bantu = bantu->next;
+        delete hapus;
+    }
+
+    head = tail = NULL;
+    cout << "Hoorah! You erased EVERYTHING YOU WORKED HARD FOR!" << endl;
+}
+
+//Tampilkan List
+void Reveal_2139() {
+    Node* bantu;
+    bantu = head;
+
+    cout << left << setw(15) << "-Nama-" << right << setw(4) << "-Usia-" << endl; // Supaya rapi
+
+    if (ItsEmpty_2139() == false) {
+        while (bantu != NULL) {
+            cout << left << setw(15) << bantu->Name_2139 << right << setw(4) << bantu->Age_2139 << endl; // Supaya lurus di output
+            bantu = bantu->next;
+        }
+
+        cout << endl;
+    }
+    else {
+        cout << "ITS EMPTY!" << endl;
+    }
+}
+
+int main() {
+    Initialize_2139(); // Inisialisasi Linked List
+    cout << "\n-=-=-= WELCOME TO JORDAN'S PROGRAM =-=-=-" << endl; // Menampilkan nama dan umur awal & menjawab poin a
+    InsertFront_2139("Karin", 18);
+    InsertFront_2139("Hoshino", 18);
+    InsertFront_2139("Akechi", 20); 
+    InsertFront_2139("Yusuke", 19);
+    InsertFront_2139("Michael", 18);
+    InsertFront_2139("Jane", 20);
+    InsertFront_2139("John", 19);
+    InsertFront_2139("Jordan", 20);
+    Reveal_2139();
+
+    // Menjawab poin b
+    cout << "-=-=-= (B) Penghapusan data 'Akechi' =-=-=-" << endl;
+    EraseMiddle_2139(6);
+    Reveal_2139();
+
+    // Menjawab poin c
+    cout << "-=-=-= (C) Penambahan data 'Futaba (18)' diantara John & Jane =-=-=-" << endl;
+    InsertMiddle_2139("Futaba", 18, 3);
+    Reveal_2139();
+
+    // Menjawab poin d
+    cout << "-=-=-= (D) Penambahan data 'Igor (20)' di awal =-=-=-" << endl;
+    InsertFront_2139("Igor", 20);
+    Reveal_2139();
+
+    // Menjawab poin e & f
+    cout << "-=-=-= (E) Mengubah data 'Michael' menjadi 'Reyn (18)' =-=-=-" << endl;
+    cout << "-=-=-= (F) Tampilan Akhir! =-=-=-" << endl;
+    ChangeMiddle_2139("Reyn", 18, 6);
+    Reveal_2139();
+
+    return 0;
+}
 ```
 #### Output:
-![Screenshot Output Unguided 1](Output-Unguided-1_Modul2_Jordan.png)   
+![Screenshot Output Unguided 1 Bagian 1](Output-Unguided-1-A_Modul3_Jordan.png)
+![Screenshot Output Unguided 1 Bagian 2](Output-Unguided-1-B_Modul3_Jordan.png)      
 
 
-### 2. Modifikasi Guided Double Linked List dilakukan dengan penambahan operasi untuk menambah data, menghapus, dan update di tengah / di urutan tertentu yang diminta. Selain itu, buatlah agar tampilannya menampilkan Nama Produk dan Harga.
-
+### 2. Modifikasi Guided Double Linked List dilakukan dengan penambahan operasi untuk menambah data, menghapus, dan update di tengah / di urutan tertentu yang diminta. Selain itu, buatlah agar tampilannya menampilkan Nama Produk dan Harga. Case:</br> 1. Tambahkan produk Azarine dengan harga 65000 diantara Somethinc dan Skintific</br> 2. Hapus produk Wardah</br> 3. Update produk Hanasui menjadi Cleora dengan harga 55000</br> 4. Tampilkan menu, di mana tampilan akhirnya akan menjadi seperti dibawah ini:
+![Gambar Soal Unguided 2](SoalUnguided2.png)  
 ```C++
 
 ```
@@ -483,9 +810,11 @@ Kode di atas digunakan untuk mencari nilai tertinggi atau maksimal pada suatu ar
 
 
 ## Kesimpulan
+Linked List adalah struktur data dinamis yang fleksibel. Berbeda dengan array, elemen-elemennya tidak perlu berada di memori yang berdekatan. Setiap elemen atau simpul pada Linked List menyimpan data dan penunjuk ke simpul berikutnya, membentuk rangkaian.</br>
 
+Terdapat dua jenis Linked List yang dibahas pada modul ini, yaitu Single Linked List dan Double Linked List. Single Linked List hanya memiliki penunjuk ke elemen berikutnya, sedangkan Double Linked List memiliki penunjuk ke elemen berikutnya dan sebelumnya, memungkinkan penelusuran bolak-balik. Masing-masing jenis Linked List memiliki kelebihan dalam hal penyisipan dan penghapusan elemen yang lebih efisien dibandingkan array. Namun, Linked List juga membutuhkan lebih banyak memori dan umumnya memiliki akses data yang lebih lambat.
 
 ## Referensi
 [1] Anita Sindar RMS, Struktur Data dan Algoritma C++, Banten: CV. AA. Rizky, 2019.</br>
-[2] Joseph Teguh Santoso, Struktur Data dan Algoritma (Bagian 1). Semarang: Yayasan Prima Agus Teknik, 2021.<br/>
+[2] Joseph Teguh Santoso, Struktur Data dan Algoritma (Bagian 1). Semarang: Yayasan Prima Agus Teknik, 2021.</br>
 [3] Muhammad Nugraha, Dasar Pemrograman Dengan C++, Materi Paling Dasar untuk Menjadi Programmer Berbagai Platform. Yogyakarta: Deepublish, 2021.
