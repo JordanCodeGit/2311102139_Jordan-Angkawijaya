@@ -18,7 +18,7 @@ Double Linked List adalah elemen-elemen yang dihubungkan dengan dua pointer dala
     1. Bagian data informasi</br>
     2. Pointer next yang menunjuk ke elemen berikutnya</br>
     3. Pointer prev yang menunjuk ke elemen sebelumnya</br>
-Keuntungan dari Double Linked List adalah memungkinkan untuk melakukan operasi penghapusan dan penambahan pada simpul dimana saja dengan efisien, sehingga sangat berguna dalam implementasi beberapa algoritma yang membutuhkan operasi tersebut. Double Linked List juga dapat melakukan traversal pada list baik dari depan (head) maupun dari belakang (tail) dengan mudah.
+<p>Keuntungan dari Double Linked List adalah memungkinkan untuk melakukan operasi penghapusan dan penambahan pada simpul dimana saja dengan efisien, sehingga sangat berguna dalam implementasi beberapa algoritma yang membutuhkan operasi tersebut. Double Linked List juga dapat melakukan traversal pada list baik dari depan (head) maupun dari belakang (tail) dengan mudah.</p>
 
 ## Guided 
 
