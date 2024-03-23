@@ -1199,8 +1199,7 @@ Kode di atas digunakan untuk menjalankan double linked list. Dalam class public 
 - void Display_2139()</br>
     Digunakan untuk menampilkan data, dilengkapi dengan setw left & right dari library iomanip supaya outputnya rapi dan linear.</br>
 <p>Lalu, dalam int main(), dideklarasikan fungsi DoublyLinkedList list dan menu untuk user memilih fungsi mana yang ingin dijalankan. Opsi 1 akan menjalankan fungsi Push_2139(), opsi 2 menjalankan fungsi Pop_2139(), opsi 3 menjalankan fungsi Update_2139(), opsi 4 menjalankan fungsi PushPosition_2139(), opsi 5 menjalankan fungsi PopPosition_2139(), opsi 6 menjalankan fungsi DeleteAll_2139(), opsi 7 menjalankan fungsi Display_2139(), dan opsi 8 akan mengakhiri program. Program ini akan mengalami looping karena perulangan while selama input user bersifat true.</p></br>
-
-<p>Pertama, menambahkan produk Azarine (65000) dengan fungsi PushPosition_2139(). Kedua, menghapuskan produk Wardah dengan fungsi PopPosition_2139(). Ketiga, mengubah data produk Hanasui menjadi Cleora (55000) dengan fungsi Update_2139(). Lalu akhirnya, menampilkan hasil akhirnya dengan fungsi Display_2139().</p>
+Pertama, menambahkan produk Azarine (65000) dengan fungsi PushPosition_2139(). Kedua, menghapuskan produk Wardah dengan fungsi PopPosition_2139(). Ketiga, mengubah data produk Hanasui menjadi Cleora (55000) dengan fungsi Update_2139(). Lalu akhirnya, menampilkan hasil akhirnya dengan fungsi Display_2139().
 
 ## Kesimpulan
 Linked List adalah struktur data dinamis yang fleksibel. Berbeda dengan array, elemen-elemennya tidak perlu berada di memori yang berdekatan. Setiap elemen atau simpul pada Linked List menyimpan data dan penunjuk ke simpul berikutnya, membentuk rangkaian.</br>
