@@ -297,7 +297,7 @@ int main() {
 
             // Case untuk menampilkan data
             case 7: {
-                cout << "\n-=- DATA PRODUK SKINCARE -=-";
+                cout << "\n-=- DATA PRODUK SKINCARE -=-" << endl;
                 list.Display_2139(); // Menampilkan data
                 break;
             }
