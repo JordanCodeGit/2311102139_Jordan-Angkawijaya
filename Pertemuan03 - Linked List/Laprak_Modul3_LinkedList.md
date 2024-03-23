@@ -341,7 +341,7 @@ Kode di atas digunakan untuk menjalankan single linked list. Struct node ini did
     Digunakan untuk menghapus seluruh data
 - void tampil()</br>
     Digunakan untuk menampilkan data</br>
-Lalu, di dalam int main() dideklarasikan fungsi-fungsi tersebut. Hasil akhir pada pendeklarasian tersebut adalah 111.
+<p>Lalu, di dalam int main() dideklarasikan fungsi-fungsi tersebut. Hasil akhir pada pendeklarasian tersebut adalah 111.</p>
 
 ### 2. Latihan Double Linked List
 
@@ -513,11 +513,11 @@ Kode di atas digunakan untuk menjalankan double linked list. Dalam class public 
     Digunakan untuk menghapus seluruh data
 - void display()</br>
     Digunakan untuk menampilkan data</br>
-Lalu, dalam int main(), dideklarasikan fungsi DoublyLinkedList list dan menu untuk user memilih fungsi mana yang ingin dijalankan. Opsi 1 akan menjalankan fungsi push(), opsi 2 menjalankan fungsi pop(), opsi 3 menjalankan fungsi update(), opsi 4 menjalankan fungsi deleteAll(), opsi 5 menjalankan fungsi display(), dan opsi terakhir akan mengakhiri program. Program ini akan mengalami looping karena perulangan while selama input user bersifat true.
+<p>Lalu, dalam int main(), dideklarasikan fungsi DoublyLinkedList list dan menu untuk user memilih fungsi mana yang ingin dijalankan. Opsi 1 akan menjalankan fungsi push(), opsi 2 menjalankan fungsi pop(), opsi 3 menjalankan fungsi update(), opsi 4 menjalankan fungsi deleteAll(), opsi 5 menjalankan fungsi display(), dan opsi terakhir akan mengakhiri program. Program ini akan mengalami looping karena perulangan while selama input user bersifat true.</p>
 
 ## Unguided 
 
-### 1. Buatlah program menu Single Linked List Non-Circular untuk menyimpan Nama dan Usia mahasiswa, dengan menggunakan inputan dari user. Lakukan operasi berikut:</br> ㅤa. Masukkan data sesuai urutan berikut. (Gunakan insert depan, belakang atau tengah). Data pertama yang dimasukkan adalah nama dan usia anda.</br> ㅤb. Hapus data Akechi</br> ㅤc. Tambahkan data berikut diantara John dan Jane: "Futaba 18"</br> ㅤd. Tambahkan data berikut di awal: "Igor 20"</br> ㅤe. Ubah data Michael menjadi: "Reyn 18"</br> f. Tampilkan seluruh data
+### 1. Buatlah program menu Single Linked List Non-Circular untuk menyimpan Nama dan Usia mahasiswa, dengan menggunakan inputan dari user. Lakukan operasi berikut:</br> ㅤa. Masukkan data sesuai urutan berikut. (Gunakan insert depan, belakang atau tengah). Data pertama yang dimasukkan adalah nama dan usia anda.</br> ㅤb. Hapus data Akechi</br> ㅤc. Tambahkan data berikut diantara John dan Jane: "Futaba 18"</br> ㅤd. Tambahkan data berikut di awal: "Igor 20"</br> ㅤe. Ubah data Michael menjadi: "Reyn 18"</br> ㅤf. Tampilkan seluruh data
 
 ```C++
 /*
@@ -859,7 +859,7 @@ Kode di atas digunakan untuk menjalankan single linked list. Struct node ini did
     Digunakan untuk menghapus seluruh data
 - void Reveal_2139()</br>
     Digunakan untuk menampilkan data, dilengkapi dengan setw left & right dari library iomanip supaya outputnya rapi dan linear. </br>
-Lalu, pada int main(), diawali dengan inisialisasi linked list dengan Initialize_2139(). Pertama, ditampilkan seluruh data yang ada pada pertanyaan Unguided ini dengan InsertFront_2139(). Kedua, menghapus data 'Akechi' dengan fungsi EraseMiddle_2139(). Ketiga, menambahkan data 'Futaba (18)' dengan fungsi InsertMiddle_2139(). Keempat, menambahkan data 'Igor (20)' dengan fungsi InsertFront_2139(). Lalu akhirnya, mengubah data 'Michael' menjadi 'Reyn (18)' dengan fungsi ChangeMiddle_2139() dan ditampilkan dengan fungsi Reveal_2139().
+<p>Lalu, pada int main(), diawali dengan inisialisasi linked list dengan Initialize_2139(). Pertama, ditampilkan seluruh data yang ada pada pertanyaan Unguided ini dengan InsertFront_2139(). Kedua, menghapus data 'Akechi' dengan fungsi EraseMiddle_2139(). Ketiga, menambahkan data 'Futaba (18)' dengan fungsi InsertMiddle_2139(). Keempat, menambahkan data 'Igor (20)' dengan fungsi InsertFront_2139(). Lalu akhirnya, mengubah data 'Michael' menjadi 'Reyn (18)' dengan fungsi ChangeMiddle_2139() dan ditampilkan dengan fungsi Reveal_2139().</p>
 
 ### 2. Modifikasi Guided Double Linked List dilakukan dengan penambahan operasi untuk menambah data, menghapus, dan update di tengah / di urutan tertentu yang diminta. Selain itu, buatlah agar tampilannya menampilkan Nama Produk dan Harga. </br>Case:</br> ㅤ1. Tambahkan produk Azarine dengan harga 65000 diantara Somethinc dan Skintific</br> ㅤ2. Hapus produk Wardah</br> ㅤ3. Update produk Hanasui menjadi Cleora dengan harga 55000</br> ㅤ4. Tampilkan menu, di mana tampilan akhirnya akan menjadi seperti dibawah ini:
 ![Gambar Soal Unguided 2](SoalUnguided2.png)  
@@ -1198,9 +1198,9 @@ Kode di atas digunakan untuk menjalankan double linked list. Dalam class public 
     Digunakan untuk menghapus seluruh data
 - void Display_2139()</br>
     Digunakan untuk menampilkan data, dilengkapi dengan setw left & right dari library iomanip supaya outputnya rapi dan linear.</br>
-Lalu, dalam int main(), dideklarasikan fungsi DoublyLinkedList list dan menu untuk user memilih fungsi mana yang ingin dijalankan. Opsi 1 akan menjalankan fungsi Push_2139(), opsi 2 menjalankan fungsi Pop_2139(), opsi 3 menjalankan fungsi Update_2139(), opsi 4 menjalankan fungsi PushPosition_2139(), opsi 5 menjalankan fungsi PopPosition_2139(), opsi 6 menjalankan fungsi DeleteAll_2139(), opsi 7 menjalankan fungsi Display_2139(), dan opsi 8 akan mengakhiri program. Program ini akan mengalami looping karena perulangan while selama input user bersifat true.</br>
+<p>Lalu, dalam int main(), dideklarasikan fungsi DoublyLinkedList list dan menu untuk user memilih fungsi mana yang ingin dijalankan. Opsi 1 akan menjalankan fungsi Push_2139(), opsi 2 menjalankan fungsi Pop_2139(), opsi 3 menjalankan fungsi Update_2139(), opsi 4 menjalankan fungsi PushPosition_2139(), opsi 5 menjalankan fungsi PopPosition_2139(), opsi 6 menjalankan fungsi DeleteAll_2139(), opsi 7 menjalankan fungsi Display_2139(), dan opsi 8 akan mengakhiri program. Program ini akan mengalami looping karena perulangan while selama input user bersifat true.</p></br>
 
-Pertama, menambahkan produk Azarine (65000) dengan fungsi PushPosition_2139(). Kedua, menghapuskan produk Wardah dengan fungsi PopPosition_2139(). Ketiga, mengubah data produk Hanasui menjadi Cleora (55000) dengan fungsi Update_2139(). Lalu akhirnya, menampilkan hasil akhirnya dengan fungsi Display_2139().
+<p>Pertama, menambahkan produk Azarine (65000) dengan fungsi PushPosition_2139(). Kedua, menghapuskan produk Wardah dengan fungsi PopPosition_2139(). Ketiga, mengubah data produk Hanasui menjadi Cleora (55000) dengan fungsi Update_2139(). Lalu akhirnya, menampilkan hasil akhirnya dengan fungsi Display_2139().</p>
 
 ## Kesimpulan
 Linked List adalah struktur data dinamis yang fleksibel. Berbeda dengan array, elemen-elemennya tidak perlu berada di memori yang berdekatan. Setiap elemen atau simpul pada Linked List menyimpan data dan penunjuk ke simpul berikutnya, membentuk rangkaian.</br>
